@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 웹페이지 정보 -->
+    <meta name="author" content="portfolio">
+    <meta name="keywords" content="portfolio,personal portfolio,web portfolio,design portfolio,포트폴리오,개인 포트폴리오,웹 포트폴리오,디자인 포트폴리오">
+    <meta name="discription" content="풀스택 개발자를 꿈꾸는 초보 웹퍼블리셔/디자이너의 포트폴리오입니다.">
+    <meta copyright="copyright" content="Hong Soo Bin">
+    <!-- 오픈그래픽 -->
+    <meta property="og:title" content="portfolio">
+    <meta property="og:url" content="http://subin2858.dothome.co.kr/subin5879">
+    <meta property="og:image" content="./image/ogimage.jpg">
+    <meta property="og:discription" content="풀스택 개발자를 꿈꾸는 초보 웹디자이너/웹 퍼블리셔의 포트폴리오입니다.">
+    <!-- 트위터 -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="portfolio">
+    <meta name="twitter:url" content="http://subin2858.dothome.co.kr/subin5879">
+    <meta name="twitter:image" content="./images/ogimage.jpg">
+    <meta name="twitter:discription" content="풀스택 개발자를 꿈꾸는 초보 웹퍼블리셔/디자이너의 포트폴리오입니다.">
+    <title>Portfolio</title>
+
+    <!-- 모든 파일 공유 -->
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="./main.css"> -->
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./animation.css">
+    
+    <style>
+        .search{
+            margin:20px;
+            position:relative;
+            animation:slideDown 0.5s;
+        }
+        .search form{
+            display:flex;
+        }
+        .search .search-field{
+            width:100%;
+            flex-shrink:0;
+            transition:0.3s;
+        }
+        .search .search-field:focus{
+            flex-shrink:initial;
+        }
+        .search .search-field:focus~.cancel-btn{
+            opacity:1;
+        }
+        
+        .search .cancel-btn{
+            /* 간격 줄어들지 않겠다- 자기 자신 크기 유지 */
+            flex-shrink:0;
+            margin-left:20px;
+            opacity:0;
+            transition:0.2s;
+        }
+        .search .search-icon{
+            position: absolute;
+            left:12px;
+            top:12px;
+            opacity:0.3;
+        }
+        .text-area{
+            margin:24px;
+            margin-top:124px;
+            margin-bottom:12px;
+        }
+        .text-area .desc{
+            margin-top:12px;
+        }
+
+        /* wrapper */
+        /* .list{
+            font-size:0;
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            grid-auto-rows:200px;
+            grid-column-gap:17px;
+            grid-row-gap:18px;
+            padding:24px;
+        } */
+        /* Photo - 안지 */
+        /* .list .item{
+            퍼센티지는 부모의 값의 값
+            background-color:red;
+            display:inline-block;
+            background-size:cover;
+            background-position:center;
+            margin:8px;
+            border-radius:5px;
+        }
+
+        .list .item:nth-child(1){
+            background-image:url(./img/port_hansol.png);
+        }
+        .list .item:nth-child(2){
+            background-image:url(./img/port_indigo.png);
+        }
+        .list .item:nth-child(3){
+            background-image:url(./img/port_megabox.png);
+        }
+        .list .item:nth-child(4){
+            background-image:url(./img/port_mozilla.png);
+        } */
+    .text-area .desc{
+        margin-bottom:50px;
+    }
+
+    .list{
+        margin:20px;
+        position:relative;
+        animation:slideDown 0.5s;
+    }
+
+    .list_content{
+        display:flex;
+        width:100%;
+        }
+    
+    .list-content li:nth-child(1){
+        flex:1;
+        width:20%;
+        box-sizing: border-box;
+    }
+
+    .list-content li:nth-child(2){
+        flex:1;
+        width:20%;
+        margin:0px 5%;
+        box-sizing: border-box;
+    }
+
+    .list-content li:nth-child(3){
+        flex:1;
+        width:20%;
+        margin-left:25px;
+        box-sizing: border-box;
+    }
+
+    .list-content li:nth-child(4){
+        flex:1;
+        width:20%;
+        box-sizing: border-box;
+    }
+
+    .list_content .img_box{
+        padding-left:25px;
+    }
+
+    .list_content h3{
+        margin-top:15px;
+        margin-bottom:15px;
+        font-size:1.15rem;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .list_content p{
+        font-size:11px;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    
+    /* .list_content h3{
+        margin-bottom:15px;
+        font-size:1.15rem;
+        font-weight: 600;
+        text-align: center;
+    }
+    .list_content p{
+        font-size:11px;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .list_content .img_box{
+      margin-bottom:15px;
+    }
+    
+    .list_content ul{
+      display:flex;
+      flex-flow:column wrap;
+      align-items:center;
+    }
+    .list_content ul li{
+      margin-bottom:60px;
+      cursor:pointer;
+    }
+    .list_content img{
+      margin-bottom:10px;
+      position:relative;
+      overflow:hidden;
+    } */
+
+        #color{
+            filter: invert(92%) sepia(6%) saturate(1556%) hue-rotate(324deg) brightness(102%) contrast(101%);
+        }
+    </style>
+</head>
+<body>
+    <!-- 검색영역 -->
+    <header class="search">
+        <form class="slideDown">
+            <input class="search-field" placeholder="Search" type="text">
+            <button class="cancel-btn">취소</button>
+            <img class="search-icon" src="./img/icon/search.svg" alt="돋보기">
+        </form>
+    </header>
+
+        <!-- 텍스트영역 -->
+        <div class="text-area">
+            <h1 class="stagger-item">My works</h1>
+            <div class="desc stagger-item">
+                저의 작업물 입니다.
+            </div>
+        </div>
+        
+
+    <!-- 콜렉션뷰 -->
+
+    
+
+    <ul class="list">
+        <div class="list_content">
+            <ul class="list_content">
+                <li>
+                    <div class="img_box">
+                        <a href="https://www.youtube.com/"><img src="./img/port_hansol.png" class="item" alt="한솔제지"></a>
+                    </div>
+                    <div class="txt_box">
+                        <h3>Hansol</h3>
+                        <p>반응형 웹페이지 리뉴얼</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="img_box">
+                        <a href="https://www.youtube.com/"><img src="./img/port_indigo.png" class="item" alt="인디고"></a>
+                    </div>
+                    <div class="txt_box">
+                        <h3>Indigo</h3>
+                        <p>
+                            반응형 웹페이지 기획, 디자인, 제작
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="img_box">
+                        <a href="https://www.youtube.com/"><img src="./img/port_mozilla.png" class="item" alt="모질라"></a>
+                    </div>
+                    <div class="txt_box">
+                        <h3>Mozilla</h3>
+                        <p>
+                            반응형 웹페이지 제작
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="img_box">
+                        <a href="https://www.youtube.com/"><img src="./img/port_megabox.png" class="item" alt="메가박스"></a>
+                    </div>
+                    <div class="txt_box">
+                        <h3>Megabox</h3>
+                        <p>
+                            반응형 웹페이지 기획, 디자인, 제작
+                        </p>
+                    </div>
+
+                <!-- </li>
+                <li><a href="https://www.youtube.com/"><img src="./img/port_indigo.png" class="item" alt="인디고"></a></li>
+                <li><a href="https://www.youtube.com/"><img src="./img/port_mozilla.png" class="item" alt="모질라"></a></li>
+                <li><a href="https://www.youtube.com/"><img src="./img/port_megabox.png" class="item" alt="메가박스"></a></li>
+            </ul>
+        </div> -->
+        
+        <!-- <li class="item stagger-item"></li></div>
+        <li class="item stagger-item"></li>
+        <li class="item stagger-item"></li> -->
+    </ul>
+
+    <nav class="gnb">
+        <a href="index.html" id="color" class="cover mouse-effect">
+            <img src="./img/icon/iconmonstr-favorite-1.svg">
+        </a>
+        <a href="about.html" id="color" class="about mouse-effect">
+            <img src="/img/icon/iconmonstr-quote-5.svg">
+        </a>
+        <a href="works.html" id="color" class="works&skills mouse-effect active">
+            <img src="./img/icon/iconmonstr-paperclip-2.svg">
+        </a>
+        <a href="contact.html" id="color" class="contact mouse-effect">
+            <img src="./img/icon/iconmonstr-fingerprint-1.svg">
+        </a>
+    </nav>
+</body>
+</html>
+
+<!-- http://subin2858.dothome.co.kr/ -->

@@ -1,0 +1,20 @@
+1. svg 파일 구해서 img 태그로 넣어주기
+<img src="../prec/img/imageFile.svg" alt="lorem asdf"/>
+2. 원하는 색의 hex 값 알아내기
+https://www.color-hex.com/
+
+3. filter 값 계산하기
+https://codepen.io/sosuke/pen/Pjoqqp
+
+위의 페이지에서 Target color 에서 hex 값 넣고, filter 값 알아내기
+
+4. img 태그나 선택자를 이용하여, css filter 속성에 3번에서 알아낸 값 붙여넣기
+#img-front {
+	filter: invert(45%) sepia(63%) saturate(1946%) hue-rotate(162deg)
+	brightness(95%) contrast(101%);
+}
+검색해보니 동일한 모양의 색갈이 다른 여러 개의 파일을 준비하여 필요한 상황에 맞춰서 갈아끼우는 것 같다.
+
+같은 이미지를 여러 개 구하기 힘들 때에는 이와 같은 방법으로 하면 동일한 svg 이미지에 다양한 색상을 입힐 수 있다.
+
+꺄호호호 넘 뿌듯행 케케

@@ -1,0 +1,106 @@
+
+body{
+            margin:0;
+            font-family: "Helvetica Neue", -apple-system, 
+            BlinkMacSystemFont, "Segoe UI", Roboto, 
+            Oxygen, Ubuntu, Cantarell, "Open Sans", sans-serif;
+            background-color:#485861;
+            color:#ffe6cf;
+            font-size:11px;
+            line-height:1.4;
+            font-weight:500;
+            overflow-x:hidden;
+        }
+        h1{
+            margin:0;
+        }
+        .text-area{
+            margin-top:90px;
+            margin-left:24px;
+        }
+        .text-area h1{
+            font-size:30px;
+            line-height:1;
+            font-weight:normal;
+            margin-bottom:22px;
+        }
+        .volume{
+            margin-bottom:85px;
+        }
+        .title{
+            font-size:9px;
+        }
+        #circle-wrapper{
+            position:relative;
+            margin-left:24px;
+            margin-top:42px;
+        }
+        .circle{
+            /* text-align:center; */
+            height:246px;
+            width:246px;
+            border-radius:50%;
+            position:absolute;
+            /* border:5px dashed #ffe6cf; */
+            /* motion-rotation:initial; */
+        }
+        .circle:nth-child(1){
+            background-color:transparent;
+            border:2px solid black;
+            /* 컴퓨터 언어의 값은 0~1의 사이를 사용 */
+            opacity:0.2;
+            /* 보더의 값을 원의 안쪽으로 들어오게 하는 것(기본보더 속성은 아우터 값) */
+            box-sizing:border-box;
+        }
+
+        .circle:nth-child(2){
+            background-color:#ffc000;
+            left:100px;
+        }
+        .circle:nth-child(3){
+            background-color:#fedd15;
+            left:200px;
+        }
+        #badge{
+            background-color:#ffc000;
+            width:56px;
+            height:56px;
+            color:#485861;
+            /* 마진은 상대적인 거리 자체를 늘리는 것, 패딩은 개체의 (내장지방)살을 찌우는 것 */
+            margin-left:24px;
+            padding-left:7px;
+            padding-top:18px;
+            font-size:9px;
+            line-height:20px;
+            box-sizing:border-box; 
+            position:fixed;
+            top:0;
+            right:24px;
+            font-weight:bold;
+        }
+        .gnb{
+            width:100%;
+            height:72px;
+            position:fixed;
+            bottom:0;
+            left:0;
+        }
+
+From 안지.
+
+우선은 배운 것들 HTML/CSS를 활용해서 다양한 응용을 해보시길 추천합니다! 배운 범위 안에서 결과물을 내고 있다면 번거로운 작업들이 많다는 것을 느끼실테고, HTML/CSS의 제약사항으로 인해 자연스럽게 javascript가 필요해지실거에요. 스스로 느끼지 않고 무조건적으로 배우면 내 것이 되지 않고 해야할 학습만 늘어나게 됩니다. 그래서 그게 1번이구요. 
+
+javascript를 기초영어라고 하고 react를 비니지스 영어로 비유해볼게요. 비지니스 영어는 비지니스에서 영어를 잘 사용하기 위한게 목적이죠! 그런데 만약 비지니스가 본인의 목적이 아닌 상태로 비지니스 영어를 배우기 시작한다면 왜 이런 것들을 써야하는지 조차 이해하지 못하게 됩니다. 이게 2번입니다.
+
+그렇다면 비지니스 영어를 배우는 것이 목적이 된 상태가 되었다고 가정해봅시다. 비지니스 영어를 잘 모르는 상태에서 비지니스를 잘하고 싶다면 부족함을 느끼겠죠.(하지만 할 수는 있습니다.) 그러면 자연스럽게 비지니스 영어를 하기 위한 어휘들을 살펴보게 되겠죠? 기초영어에서는 필요하지 않은 어휘가 비지니스 영어에서는 필요합니다. 
+
+다시 javascript로 돌아와서 react는 기본적으로 javascript라는 언어로 UI Component를 더 잘 만들게 해주는 Library입니다. 즉 비지니스 영어와 같이 영어 중에서도 무언가에 특화된 스킬을 가진 녀석이라는 것이죠. 
+
+그래서 기초 javascript를 할 수 있어야합니다. 범위를 묻는다면 꽤 광범위 하지만, 변수(variable), 반복(iteration), 조건(if, else, switch), 함수(function), 클래스(class)까지 알고 있다면 좋습니다. 하지만 react는 반복 중에서도 특정 반복문을 사용하기를 권장하고 변수도 자기만의 변수를 사용하는 방식을, 조건은 삼항 연산자와 같은 표현방식을 좋아합니다. 마치 비니지스 영어에서 고급어휘들이 그러하듯이 같은 의미이지만 특정한 것을 지칭하기 위해 다른 표현이 있는 것 처럼요. 
+그리고 javascript와 HTML/CSS의 상호 작용을 이해해야 합니다. 앞에 나열한 내용이 문법이라면 이 상호작용은 단어와 숙어에 가깝습니다. 제가 이 강의를 구성한 이유가 나중에 결국 상호작용하기 때문에 HTML/CSS를 알려드린 것입니다.
+
+벌써 머리가 아프실거에요! 이것들을 계획하고 하려면 너무 어렵고 힘듭니다. 
+
+영어를 배우다가 비지니스를 하게 되었을 때 부딪히면서 배운다면 위에 나열한 머리 아픈 것들이 자연스럽게 다가오는 경험을 하시는 것과 마찬가지로 할 수 있는 범위에서 조금씩 더 표현하고 싶은 생각이 들게 되면 자연스럽게 앞으로 나아가는 경험을 하시게 될거에요.
+
+javascript나 react강의를 진행하고 싶은 마음은 있지만 당장은 어려울 것 같습니다. 위 코멘트 내용들이 잘 전달되었으면 좋겠습니다!
